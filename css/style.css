@@ -1,0 +1,567 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    width: 100%;
+
+    background-image: url("../images/PhadentDentalClinicPhoto.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    color: white;
+}
+
+/* DARK OVERLAY  */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+}
+
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+    animation: fadeUp 1s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 5px 20px rgba(16, 6, 133, 0.5);
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 20px;
+    padding: 10px 22px;
+    border-radius: 10px;
+    background: #150782;
+    color: #e3e2e4;
+    font-weight: bold;
+    transition: 0.3s;
+
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+    background: #1812c2;
+    color: white;
+
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    opacity: 0.8;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 80px 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* ================= GRID CARDS ================= */
+
+.service-cards,
+
+.value-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card,
+.doctor-card,
+.service-card,
+.value-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover,
+.doctor-card:hover,
+.service-card:hover,
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= ABOUT ================= */
+
+.about-preview {
+    background: #eef3ff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ================= FORM ================= */
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 0 5px rgba(30, 60, 114, 0.3);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e3c72;
+    color: white;
+}
+
+/* ================= HERO PAGES ================= */
+
+.page-hero {
+    padding-top: 120px;
+    text-align: center;
+    background: linear-gradient(90deg, #eef3ff, #ffffff);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+}
+
+
+/* burger animation */
+.burger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.burger.open {
+    transform: rotate(90deg);
+}
+
+/* MOBILE MENU - smooth slide */
+@media (max-width: 768px) {
+
+    .burger {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #1e3c72, #2a5298);
+
+        display: flex;
+        flex-direction: column;
+
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 0.4s ease;
+    }
+
+    .navbar.active {
+        max-height: 300px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.doctor-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.doctor-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.doctor-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.doctor-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 60px 40px;
+}
+
+/* LEFT INFO */
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* FORM */
+.contact-form {
+    flex: 1;
+    min-width: 320px;
+    max-width: 550px;
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* FIELDSET */
+.contact-form fieldset {
+    border: none;
+}
+
+/* LEGEND */
+.contact-form legend {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+
+    border: 1px solid #d0d7e2;
+    border-radius: 12px;
+
+    background: #f9fbff;
+
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 10px rgba(42, 82, 152, 0.2);
+    outline: none;
+}
+
+/* BUTTON */
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ABOUT SECTION */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* IMAGE */
+.about-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    transition: 0.4s;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+}
+
+/* STATS */
+.stats {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+
+    backdrop-filter: blur(5px);
+
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    background: #eef3ff;
+}
+
+.cta h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
