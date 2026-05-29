@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Clinic</title>
+    <title>PhaDent Dental Clinic | Exclusive Smile Design</title>
+
+    <!-- FontAwesome Icons (Added for modern service and button icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Common CSS File -->
     <link rel="stylesheet" href="css/style.css">
@@ -14,191 +17,220 @@
 
     <!-- HEADER -->
     <header class="header">
-
         <div class="logo">
-            <h1>SmileCare</h1>
+            <h1>Pha<span>Dent</span></h1>
         </div>
 
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="doctors.html">Doctors</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
     </header>
 
-    <!-- HERO SECTION -->
     <main>
-
+        <!-- 1. HERO SECTION (Cinematic Video Background) -->
         <section class="hero">
+            <div class="video-background">
+                <video autoplay loop muted playsinline>
+                    <source src="videos/clinic-hero-bg.mp4" type="video/mp4">
+                    <!-- Fallback image if video fails to load -->
+                    <img src="images/hero-fallback.jpg" alt="PhaDent Clinic">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
 
             <div class="hero-content">
-
                 <h2>Your Smile Deserves The Best Care</h2>
-
                 <p>
                     Professional dental services with modern technology,
-                    experienced doctors and comfortable environment.
+                    experienced academic doctors, and a premium comfortable environment.
                 </p>
-
-                <a href="contact.html" class="btn">
-                    Book Appointment
+                <a href="contact.html" class="btn btn-primary animate-btn">
+                    <i class="fa-regular fa-calendar-check"></i> Book Appointment
                 </a>
-
             </div>
-
         </section>
 
-        <!-- SERVICES SECTION -->
+        <!-- 2. SERVICES SECTION -->
         <section class="services">
-
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title">Our Premium Services</h2>
+            <p class="section-subtitle">Advanced digital dental solutions for your oral health</p>
 
             <div class="service-cards">
-
                 <article class="card">
-
+                    <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <h3>Teeth Whitening</h3>
-
-                    <p>
-                        Modern whitening methods for a brighter and healthier smile.
-                    </p>
-
+                    <p>Modern laser whitening methods for a brighter, healthier, and completely natural smile.</p>
+                    <a href="services.html" class="card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
 
                 <article class="card">
-
+                    <div class="card-icon"><i class="fa-solid fa-tooth"></i></div>
                     <h3>Dental Implants</h3>
-
-                    <p>
-                        Safe and professional implant procedures with quality materials.
-                    </p>
-
+                    <p>Safe, seamless, and professional implant procedures utilizing top-tier global materials.</p>
+                    <a href="services.html" class="card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
 
                 <article class="card">
-
+                    <div class="card-icon"><i class="fa-solid fa-teeth-open"></i></div>
                     <h3>Orthodontics</h3>
-
-                    <p>
-                        Braces and alignment treatments for all age groups.
-                    </p>
-
+                    <p>Clear aligners and advanced braces tailored for all age groups to achieve perfect alignment.</p>
+                    <a href="services.html" class="card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
-
             </div>
-
         </section>
 
-        <!-- ABOUT SECTION -->
+        <!-- INTERACTIVE BEFORE/AFTER SECTION -->
+        <section class="before-after-section">
+            <h2 class="section-title">Discover The Transformation</h2>
+            <p class="section-subtitle">Real results from our smile design patients</p>
+
+            <div class="before-after-container">
+                <div class="img-container before-img">
+                    <img src="images/before-teeth.jpg" alt="Before Treatment">
+                </div>
+                <div class="img-container after-img">
+                    <img src="images/after-teeth.jpg" alt="After Treatment">
+                </div>
+                <!-- Interactive slider range input -->
+                <input type="range" min="0" max="100" value="50" class="slider" id="beforeAfterSlider">
+                <div class="slider-button"></div>
+            </div>
+        </section>
+
+        <!-- 3. ABOUT SECTION -->
         <section class="about-preview">
-
-            <div class="about-text">
-
-                <h2>Why Choose Us?</h2>
-
-                <p>
-                    Our clinic combines advanced dental technology with patient-focused care.
-                    We create a comfortable atmosphere where every patient feels safe.
-                </p>
-
-                <a href="about.html" class="btn-secondary">
-                    Learn More
-                </a>
-
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="images/clinic-interior.jpg" alt="PhaDent Modern Clinic Interior">
+                </div>
+                <div class="about-text">
+                    <h2>Why Choose PhaDent?</h2>
+                    <p>
+                        Our clinic combines advanced dental technology, such as AI-powered smile design
+                        and digital impression scanning, with patient-focused elite care.
+                        We create a seamless experience where every patient feels safe.
+                    </p>
+                    <ul class="about-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 100% Digital Treatment Planning</li>
+                        <li><i class="fa-solid fa-circle-check"></i> World-Class Sterilization Standards</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Painless & Comfortable Environment</li>
+                    </ul>
+                    <a href="about.html" class="btn-secondary">
+                        Learn More About Us <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
             </div>
-
         </section>
 
-        <!-- DOCTORS SECTION -->
+        <!-- 4. DOCTORS SECTION -->
         <section class="doctors-preview">
-
-            <h2 class="section-title">Our Doctors</h2>
+            <h2 class="section-title">Our Specialist Doctors</h2>
+            <p class="section-subtitle">Your health is in safe hands with our experienced academic team</p>
 
             <div class="doctor-container">
-
                 <article class="doctor-card">
-
+                    <div class="doctor-img">
+                        <img src="images/doctor-anna.jpg" alt="Dr. Anna Smith">
+                    </div>
                     <h3>Dr. Anna Smith</h3>
-
-                    <p>Orthodontist</p>
-
+                    <p class="specialty">Orthodontist</p>
                 </article>
 
                 <article class="doctor-card">
-
+                    <div class="doctor-img">
+                        <img src="images/doctor-david.jpg" alt="Dr. David Brown">
+                    </div>
                     <h3>Dr. David Brown</h3>
-
-                    <p>Dental Surgeon</p>
-
+                    <p class="specialty">Dental Surgeon</p>
                 </article>
 
                 <article class="doctor-card">
-
+                    <div class="doctor-img">
+                        <img src="images/doctor-emily.jpg" alt="Dr. Emily White">
+                    </div>
                     <h3>Dr. Emily White</h3>
-
-                    <p>Therapist</p>
-
+                    <p class="specialty">Therapist</p>
                 </article>
-
             </div>
-
         </section>
 
-        <!-- APPOINTMENT FORM -->
-        <section class="appointment">
+        <!-- 5. TESTIMONIALS -->
+        <section class="testimonials">
+            <h2 class="section-title">What Our Patients Say</h2>
 
-            <h2 class="section-title">Book Appointment</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Excellent service and very professional staff. The entire digital smile design process was
+                        highly comfortable and transparent."</p>
+                    <span class="patient-name">Anna K.</span>
+                </div>
 
-            <form class="appointment-form">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"The clinic is exceptionally modern, clean, and welcoming. I was terrified of implants, but the
+                        PhaDent team completely changed my mind."</p>
+                    <span class="patient-name">David M.</span>
+                </div>
 
-                <fieldset>
-
-                    <legend>Patient Information</legend>
-
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email">
-
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" name="date">
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Write your message"></textarea>
-
-                    <button type="submit" class="submit-btn">
-                        Send
-                    </button>
-
-                </fieldset>
-
-            </form>
-
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Friendly doctors and outstanding results. Every time I look in the mirror, I'm glad I chose
+                        PhaDent for my aesthetic treatments."</p>
+                    <span class="patient-name">Emily R.</span>
+                </div>
+            </div>
         </section>
 
+        <!-- 6. GALLERY -->
+        <section class="gallery-preview">
+            <h2 class="section-title">Clinic Gallery</h2>
+
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/gallery1.jpg" alt="PhaDent Clinic Reception"></div>
+                <div class="gallery-item"><img src="images/gallery2.jpg" alt="Modern Operation Room"></div>
+                <div class="gallery-item"><img src="images/gallery3.jpg" alt="Advanced Dental Equipment"></div>
+                <div class="gallery-item"><img src="images/gallery4.jpg" alt="Patient Lounge Area"></div>
+            </div>
+        </section>
+
+        <!-- 7. CALL TO ACTION -->
+        <section class="home-cta">
+            <div class="cta-content">
+                <h2>Ready For Your Perfect Smile?</h2>
+                <p>Schedule your complimentary initial consultation and digital planning session today.</p>
+                <a href="contact.html" class="btn btn-white">
+                    <i class="fa-regular fa-calendar"></i> Book Your Appointment
+                </a>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-
-        <p>
-            © 2026 SmileCare Dental Clinic | All Rights Reserved
-        </p>
-
+        <p> 2026 PhaDent Dental Clinic | All Rights Reserved.</p>
     </footer>
 
     <!-- JavaScript File -->
     <script src="js/script.js"></script>
-
 </body>
 
 </html>

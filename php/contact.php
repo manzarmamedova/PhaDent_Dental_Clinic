@@ -1,25 +1,38 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name = trim($_POST["name"]);
-    $email = trim($_POST["email"]);
-    $date = trim($_POST["date"]);
-    $message = trim($_POST["message"]);
+    $name = trim($_POST["name"] ?? "");
+    $email = trim($_POST["email"] ?? "");
+    $phone = trim($_POST["phone"] ?? "");
+    $date = trim($_POST["date"] ?? "");
+    $message = trim($_POST["message"] ?? "");
 
-    // basic validation
-    if (empty($name) || empty($email) || empty($message)) {
-        echo "Please fill all required fields!";
+    if ($name == "" || $email == "" || $message == "") {
+        echo "Please fill required fields!";
         exit;
     }
 
-    // data format
-    $data = "Name: $name | Email: $email | Date: $date | Message: $message" . PHP_EOL;
+    $data =
+        "------------------------" . PHP_EOL .
+        "Name: " . $name . PHP_EOL .
+        "Email: " . $email . PHP_EOL .
+        "Phone: " . $phone . PHP_EOL .
+        "Date: " . $date . PHP_EOL .
+        "Message: " . $message . PHP_EOL .
+        "Time: " . date("Y-m-d H:i:s") . PHP_EOL .
+        "------------------------" . PHP_EOL . PHP_EOL;
 
-    // save to file (mini database)
-    file_put_contents("../data/appointments.txt", $data, FILE_APPEND);
+    $result = file_put_contents(
+        __DIR__ . "/../data/appointments.txt",
+        $data,
+        FILE_APPEND
+    );
 
-    echo "Appointment successfully saved. We will contact you soon.";
+    var_dump($result);
+    exit;
 }
 
 ?>
