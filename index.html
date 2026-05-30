@@ -35,14 +35,7 @@
     <main>
         <!-- 1. HERO SECTION (Cinematic Video Background) -->
         <section class="hero">
-            <div class="video-background">
-                <video autoplay loop muted playsinline>
-                    <source src="videos/clinic-hero-bg.mp4" type="video/mp4">
-                    <!-- Fallback image if video fails to load -->
-                    <img src="images/hero-fallback.jpg" alt="PhaDent Clinic">
-                </video>
-                <div class="video-overlay"></div>
-            </div>
+
 
             <div class="hero-content">
                 <h2>Your Smile Deserves The Best Care</h2>
@@ -92,40 +85,39 @@
 
             <div class="before-after-container">
                 <div class="img-container before-img">
-                    <img src="images/before-teeth.jpg" alt="Before Treatment">
+                    <img src="images/before-teeth.jpeg" alt="Before Treatment">
                 </div>
+
                 <div class="img-container after-img">
-                    <img src="images/after-teeth.jpg" alt="After Treatment">
+                    <img src="images/after-teeth.jpeg" alt="After Treatment">
                 </div>
-                <!-- Interactive slider range input -->
-                <input type="range" min="0" max="100" value="50" class="slider" id="beforeAfterSlider">
-                <div class="slider-button"></div>
             </div>
         </section>
 
         <!-- 3. ABOUT SECTION -->
-        <section class="about-preview">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="images/clinic-interior.jpg" alt="PhaDent Modern Clinic Interior">
-                </div>
-                <div class="about-text">
-                    <h2>Why Choose PhaDent?</h2>
-                    <p>
-                        Our clinic combines advanced dental technology, such as AI-powered smile design
-                        and digital impression scanning, with patient-focused elite care.
-                        We create a seamless experience where every patient feels safe.
-                    </p>
-                    <ul class="about-features">
-                        <li><i class="fa-solid fa-circle-check"></i> 100% Digital Treatment Planning</li>
-                        <li><i class="fa-solid fa-circle-check"></i> World-Class Sterilization Standards</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Painless & Comfortable Environment</li>
-                    </ul>
-                    <a href="about.html" class="btn-secondary">
-                        Learn More About Us <i class="fa-solid fa-chevron-right"></i>
-                    </a>
-                </div>
-            </div>
+
+        <div class="why-card">
+
+            <h2>Why Choose PhaDent?</h2>
+
+            <p>
+                Our clinic combines advanced dental technology, such as AI-powered smile design
+                and digital impression scanning, with patient-focused elite care.
+                We create a seamless experience where every patient feels safe.
+            </p>
+
+            <ul class="about-features">
+                <li><i class="fa-solid fa-circle-check"></i> 100% Digital Treatment Planning</li>
+                <li><i class="fa-solid fa-circle-check"></i> World-Class Sterilization Standards</li>
+                <li><i class="fa-solid fa-circle-check"></i> Painless & Comfortable Environment</li>
+            </ul>
+
+            <a href="about.html" class="btn btn-secondary">
+                Learn More About Us <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+        </div>
+        </div>
         </section>
 
         <!-- 4. DOCTORS SECTION -->
@@ -136,7 +128,7 @@
             <div class="doctor-container">
                 <article class="doctor-card">
                     <div class="doctor-img">
-                        <img src="images/doctor-anna.jpg" alt="Dr. Anna Smith">
+                        <img src="images/doctor1.jpeg" alt="Dr. Anna Smith">
                     </div>
                     <h3>Dr. Anna Smith</h3>
                     <p class="specialty">Orthodontist</p>
@@ -144,7 +136,7 @@
 
                 <article class="doctor-card">
                     <div class="doctor-img">
-                        <img src="images/doctor-david.jpg" alt="Dr. David Brown">
+                        <img src="images/doctor2.jpeg" alt="Dr. David Brown">
                     </div>
                     <h3>Dr. David Brown</h3>
                     <p class="specialty">Dental Surgeon</p>
@@ -152,7 +144,7 @@
 
                 <article class="doctor-card">
                     <div class="doctor-img">
-                        <img src="images/doctor-emily.jpg" alt="Dr. Emily White">
+                        <img src="images/doctor3.jpeg" alt="Dr. Emily White">
                     </div>
                     <h3>Dr. Emily White</h3>
                     <p class="specialty">Therapist</p>
@@ -205,8 +197,9 @@
             <h2 class="section-title">Clinic Gallery</h2>
 
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="images/gallery1.jpg" alt="PhaDent Clinic Reception"></div>
-                <div class="gallery-item"><img src="images/gallery2.jpg" alt="Modern Operation Room"></div>
+                <div class="gallery-item"><img src="images/PhadentDentalClinicPhoto.jpeg"
+                        alt="PhaDent Clinic Reception"></div>
+                <div class="gallery-item"><img src="images/clinic-interior.jpg" alt="Modern Operation Room"></div>
                 <div class="gallery-item"><img src="images/gallery3.jpg" alt="Advanced Dental Equipment"></div>
                 <div class="gallery-item"><img src="images/gallery4.jpg" alt="Patient Lounge Area"></div>
             </div>
