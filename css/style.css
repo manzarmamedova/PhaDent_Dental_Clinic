@@ -503,16 +503,17 @@ textarea:focus {
 }
 
 /* IMAGE */
+.about-image {
+    width: 100%;
+}
+
 .about-image img {
     width: 100%;
+    max-width: 550px;
     height: 420px;
     object-fit: cover;
-
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-
-    transition: 0.4s;
+    display: block;
+    margin: 0 auto;
 }
 
 .about-image img:hover {
@@ -978,4 +979,36 @@ textarea:focus {
     font-size: 16px;
     line-height: 1.6;
     opacity: 0.95;
+}
+
+/* ABOUT PAGE MOBILE FIX */
+
+@media screen and (max-width: 768px) {
+
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+        display: block;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
